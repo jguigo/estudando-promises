@@ -166,3 +166,19 @@ function criarCartao(nome){
     })
 }
 criarCartao('Guilhermeeee').catch((error) => console.log(error))
+
+
+//Outra forma de fazer seria
+function criarCartao2(nome){
+    return new Promise(async (resolve, reject) => { //passar o async antes do parâmetro
+        if(nome == 'Larissa'){
+            return reject("Nome não é permitido");
+        }
+
+        await fs.appendFile('cartao-visita.txt', `Olá meu nome é ${nome}\n`); //passa o await pra não ter que usar o then!
+        resolve();
+        console.log('Cartão adicionado ao arquivo');
+
+    })
+}
+criarCartao2('Guilhermeeee').catch((error) => console.log(error))
