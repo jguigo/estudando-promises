@@ -2,30 +2,30 @@
 
 const fs = require("fs/promises");
 const { resolve } = require("path");
-// fs
-//     .readFile("./arquivos-de-leitura/texto.txt")
-//     .then((a) => {
-//         console.log('texto lido com sucesso');
-//     })
-//     .catch((erro) => console.log("deu ruim"));
-// fs
-//     .readFile("./arquivos-de-leitura/texto2.txt")
-//     .then((a) => {
-//         console.log('texto2 lido com sucesso');
-//     })
-//     .catch((erro) => console.log("deu ruim"));
-// fs
-//     .readFile("./arquivos-de-leitura/texto3.txt")
-//     .then((a) => {
-//         console.log('texto3 lido com sucesso');
-//     })
-//     .catch((erro) => console.log("deu ruim"));
-// fs
-//     .readFile("./arquivos-de-leitura/texto4.txt")
-//     .then((a) => {
-//         console.log('texto4 lido com sucesso');
-//     })
-//     .catch((erro) => console.log("deu ruim"));
+fs
+    .readFile("./arquivos-de-leitura/texto.txt")
+    .then((a) => {
+        console.log('texto lido com sucesso');
+    })
+    .catch((erro) => console.log("deu ruim"));
+fs
+    .readFile("./arquivos-de-leitura/texto2.txt")
+    .then((a) => {
+        console.log('texto2 lido com sucesso');
+    })
+    .catch((erro) => console.log("deu ruim"));
+fs
+    .readFile("./arquivos-de-leitura/texto3.txt")
+    .then((a) => {
+        console.log('texto3 lido com sucesso');
+    })
+    .catch((erro) => console.log("deu ruim"));
+fs
+    .readFile("./arquivos-de-leitura/texto4.txt")
+    .then((a) => {
+        console.log('texto4 lido com sucesso');
+    })
+    .catch((erro) => console.log("deu ruim"));
 
 //Nesse primeiro teste, a promises vão retornando conforme a leitura vai sendo finalizada!
 //Ou seja, arquivos menores são lidos mais rapidamente e consequêntimente retornam um resultado mais rápido
@@ -40,12 +40,12 @@ const { resolve } = require("path");
 //Caso queira que seja rodado outra requisição depois que a primeira for feita, então é necessário fazer um encapsulamento do .then()
 //e isso é um dos maiores problemas do then, pois vai geral um callback-hell
 
-// fs
-//     .readFile("./arquivos-de-leitura/texto.txt")
-//     .then((a) => {
-//         fs.readFile("./arquivos-de-leitura/texto.txt").then(() => {}); //segundo .then()
-//     })
-//     .catch((erro) => console.log("deu ruim"));
+fs
+    .readFile("./arquivos-de-leitura/texto.txt")
+    .then((a) => {
+        fs.readFile("./arquivos-de-leitura/texto.txt").then(() => {}); //segundo .then()
+    })
+    .catch((erro) => console.log("deu ruim"));
 
 //para resolver esse problema foi criado o 'async' 'await', o único problema é que ele só pode ser utilizado dentro de uma escopo de uma função!
 //obs: já esta sendo resolvido!
